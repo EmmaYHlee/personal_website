@@ -27,9 +27,9 @@
   ];
 
   const HIGHLIGHTS = [
-    '1 first-author manuscript under review at Science',
+    '1 manuscript under review at Science',
     'Collaborated with Harvard, Stanford & U of T labs',
-    'Pre-trained ~1B-parameter models on 4× NVIDIA H100',
+    'Constructed a biomedical KG with 1.6M+ nodes and 2.2M+ relationships,',
     'Built multi-agent AI platforms with the Claude Agent SDK',
     'GPA 3.93 / 4.0 — University of Toronto honours',
   ];
@@ -38,25 +38,25 @@
 
   const WORK = [
     { role: 'Machine Learning Engineer', org: 'Tahoe Therapeutics', period: 'Feb 2026 – Present', collaborators: [], bullets: [
-      'Built a multi-agent AI platform (Claude Agent SDK, MCP, browser automation) to discover, retrieve and process thousands of biomedical papers from PubMed, Europe PMC, Semantic Scholar and publisher APIs.',
-      'Engineered LLM-powered pipelines converting PDFs, JATS and BioC XML into structured clinical datasets and drug knowledge graphs — linking compounds, treatment arms, dosages, adverse events and study evidence across thousands of curated publications.',
-      'Designed a provider-agnostic LLM framework with LiteLLM integrating OpenAI, Anthropic, Amazon Bedrock and Qwen for prompt engineering, model evaluation, benchmarking and cost/performance optimization.',
-      'Developed scalable AI infrastructure — RAG workflows, vector databases, structured outputs, automated evaluation and Claude Code + MCP development environments — for reliable, production-grade biomedical AI systems.',
+      'Benchmarked frontier LLMs (OpenAI, Anthropic, Amazon Bedrock, and Qwen APIs) for biomedical information extraction, optimizing extraction quality, latency, and inference cost to reduce production expenses by ~35%.',
+      'Designed multi-agent literature intelligence workflows with the Claude Agent SDK and MCP tools to autonomously discover, retrieve, and curate 300K+ biomedical publications, integrating public literature with the company's proprietary experimental data for AI-ready knowledge generation.',
+      'Built a production large-scale LLM extraction pipeline that extracts clinical data into structured treatment regimens, adverse events, biomarkers, and supporting evidence for automated knowledge graph construction.',
+      'Constructed a biomedical knowledge graph with 1.6M+ nodes and 2.2M+ relationships, powering KG-based AI agents for biomedical question answering and drug discovery.',
     ], tags: ['Claude Agent SDK', 'MCP', 'LiteLLM', 'RAG', 'Vector DBs', 'Bedrock'] },
     { role: 'LLM Researcher', org: 'Donnelly Centre · Harvard', period: 'Sep 2025 – Feb 2026', collaborators: ['Dr. Duncan Forster', 'Qi Wu (PhD Candidate)', 'Prof. Gary Bader', 'Prof. Chris Sander'], bullets: [
-      'Created a large-scale codebase to train a domain-specific LLM from scratch on human gene biomedical literature, avoiding biases from general pre-trained models.',
-      'Designed pre-training workflows using masked-token and next-token prediction, learning rich representations directly from unstructured full-text data.',
+      'Engineered distributed retrieval pipelines achieving 7× greater full-text coverage and 10× more extracted evidence spans than prior systems at half the processing time.',
+      'Led discussions with 10+ professors, postdocs, and PhD researchers to optimize the NER and NEL pipeline, refining annotation and extraction methods to improve downstream model performance.',
       'Leveraged the Trillium GPU cluster (4× NVIDIA H100) to pre-train models up to ~1B parameters with distributed training, mixed-precision optimization and gradient checkpointing.',
-      'Produced gene embeddings via parameter-efficient fine-tuning with contrastive loss, integrated into a human gene-function interaction network with improved semantic clustering and functional enrichment. First-author manuscript in progress.',
+      'Produced gene embeddings via parameter-efficient fine-tuning with contrastive loss, integrated into a human gene-function interaction network with improved semantic clustering and functional enrichment.',
     ], tags: ['PyTorch', 'H100', 'Distributed training', 'PEFT', 'Contrastive learning'] },
     { role: 'Computational Genomics Researcher', org: 'University of Toronto', period: 'Jan 2025 – Aug 2025', collaborators: ['Dr. Matt J. Thorstensen', 'Dr. Else Mikkelsen', 'Prof. Jason T. Weir'], bullets: [
       'Designed large-scale orthology inference pipelines across 66 avian genomes, curating 1,468 strict single-copy orthologs with multiple sequence alignment (MUSCLE, HyPhy).',
       'Integrated trace-plot diagnostics (log prior, log-likelihood, dN/dS) into a codon-based mutation-selection model (NodeMutSel) to ensure convergence, parameter stability and biologically meaningful long-term Ne estimates.',
       'Applied hierarchical statistical models (LME in R, Bayesian MCMC in brms/Stan) to quantify ecological effects on Ne, with random intercepts for species and phylogeny.',
-      'Generated data-driven evolutionary insights challenging conventional tropical demographic hypotheses. First-author manuscript under revision.',
+      'Generated data-driven evolutionary insights challenging conventional tropical demographic hypotheses. Manuscript awarded 2026 Research & Innovation Prize.',
     ], tags: ['Python', 'R (brms/Stan)', 'Bayesian modeling', 'OrthoFinder', 'HyPhy'] },
     { role: 'Biomedical NLP Researcher', org: 'Vector Institute · Donnelly', period: 'Jan 2024 – Dec 2024', collaborators: ['Dr. Duncan Forster', 'Qi Wu (PhD Candidate)', 'Prof. Charles Boone', 'Prof. Gary Bader'], bullets: [
-      'Built a scalable full-text retrieval pipeline processing 80K+ biomedical articles — a novel dataset surpassing platforms such as NCBI PubTator; re-engineered on GPU clusters to retrieve ~7× more full texts and ~10× more spans in half the time.',
+      'Built literature mining pipelines processing 80K+ biomedical full-text articles for large-scale gene function prediction, surpassing NCBI PubTator in coverage.',
       'Constructed the most comprehensive yeast gene functional interaction network, outperforming wet-lab (Costanzo et al., 2016) and computational benchmarks; boosted state-of-the-art BIONIC for gene function, chemical-genetic interactions and drug-target prediction.',
       'Resolved a dataset-noise challenge (high precision, low accuracy) by diagnosing error propagation and testing embedding strategies for semantic clustering and denoising.',
       'Fine-tuned BioBERT (PyTorch, Hugging Face) for high-precision annotation and built an industrial-scale human gene-function network. First-author and co-author manuscripts in preparation.',
@@ -76,11 +76,10 @@
       blurb: 'A domain-specific LLM pre-trained from scratch on gene biomedical literature; PEFT + contrastive loss for functional interaction analysis.',
       collaborators: ['Dr. Duncan Forster', 'Qi Wu (PhD Candidate)', 'Prof. Gary Bader', 'Prof. Chris Sander'],
       achievements: [
-        'Creating a large-scale codebase for training a domain-specific LLM from scratch on human gene biomedical literature, avoiding biases from general pre-trained models.',
-        'Designing pre-training workflows using masked-token and next-token prediction, learning rich representations directly from unstructured full text.',
-        'Leveraging the Trillium GPU cluster (4× NVIDIA H100) to pre-train models up to ~1B parameters with distributed training, mixed-precision optimization and gradient checkpointing.',
-        'Producing gene embeddings via parameter-efficient fine-tuning with contrastive loss — a reusable resource for functional network construction, clustering and predictive modelling.',
-        'Integrating embeddings into a human gene-function interaction network with improved semantic clustering and functional enrichment over existing methods.',
+         'Engineered distributed retrieval pipelines achieving 7× greater full-text coverage and 10× more extracted evidence spans than prior systems at half the processing time.',
+         'Led discussions with 10+ professors, postdocs, and PhD researchers to optimize the NER and NEL pipeline, refining annotation and extraction methods to improve downstream model performance.',
+         'Leveraged the Trillium GPU cluster (4× NVIDIA H100) to pre-train models up to ~1B parameters with distributed training, mixed-precision optimization and gradient checkpointing.',
+         'Produced gene embeddings via parameter-efficient fine-tuning with contrastive loss, integrated into a human gene-function interaction network with improved semantic clustering and functional enrichment.',
       ],
       rskills: ['Python', 'PyArrow', 'asyncio', 'Distributed training', 'Masked/next-token prediction', 'PEFT', 'Contrastive learning', 'H100'] },
     { num: '02', title: 'Industrial-Scale Gene Function Network', venue: 'Vector Institute · Donnelly Centre · Sep 2024 – Dec 2024', author: 'First author', status: 'In preparation', badge: 'coral',
