@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emma Lee — ML Engineer &amp; Applied AI Researcher</title>
+<meta name="description" content="Emma Lee — ML Engineer and Applied AI Researcher. LLMs, RAG, multi-agent systems and knowledge graphs.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="site-root" id="root">
+
+  <!-- ============ NAV ============ -->
+  <nav class="main-nav">
+    <button class="nav-brand" id="navHome" aria-label="Go to home">
+      <span class="nav-brand-mark">E</span>
+      <span class="nav-brand-name">Emma Lee</span>
+    </button>
+    <div class="nav-right">
+      <div class="nav-links" id="navLinks"></div>
+      <a class="btn-resume" id="resumeLinkNav"
+         href="https://drive.google.com/file/d/1dO2boFIBOtPT0oPezZbxld5jnUunw_Jk/view?usp=drive_link"
+         target="_blank" rel="noopener">Résumé</a>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section id="sec-home">
+    <div class="hero-section">
+      <canvas class="hero-canvas" id="heroCanvas"></canvas>
+      <div class="hero-glow"></div>
+
+      <div class="hero-b-inner">
+        <div class="hero-b-avatar" data-reveal data-anim="pop">
+          <div class="hero-b-avatar-ring"></div>
+          <img src="images/profile.jpg" alt="Emma Lee">
+        </div>
+        <div class="hero-eyebrow" data-reveal data-anim="up" data-reveal-delay="60">ML Engineer · Applied AI Researcher · Toronto</div>
+        <h1 data-reveal data-anim="up" data-reveal-delay="120">Emma Lee</h1>
+        <div class="hero-role-line" data-reveal data-anim="up" data-reveal-delay="180">
+          I build <span class="role-text" data-role-text>ML / AI systems.</span><span class="type-cursor"></span>
+        </div>
+        <p class="hero-lead" data-reveal data-anim="up" data-reveal-delay="240">I build AI systems for reasoning over complex, unstructured data — using LLMs, retrieval systems, and graph-based representations. A 2026 University of Toronto graduate with experience in multi-agent AI systems and large-scale information extraction.</p>
+        <div class="hero-highlight-pill" data-reveal data-anim="pop" data-reveal-delay="280">
+          <span class="hero-highlight-dot"></span>
+          <span class="hero-highlight-text" data-highlight-text></span>
+        </div>
+        <div class="hero-actions" data-reveal data-anim="up" data-reveal-delay="320">
+          <a class="btn-primary-pill" data-nav="about">Explore my work ↓</a>
+          <a class="btn-outline-pill" data-nav="blog">Read the blog</a>
+        </div>
+        <div class="stats-grid" data-reveal data-anim="up" data-reveal-delay="360" id="statsGridB"></div>
+      </div>
+
+      <button class="scroll-cue" data-nav="about" aria-label="Scroll to About">
+        <span class="scroll-cue-arrow">↓</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="sec-about" class="about-section">
+    <div class="about-blob" data-parallax="0.3"></div>
+    <div class="section-inner">
+      <div class="about-grid" data-stack>
+        <div class="about-photo-wrap" data-reveal data-anim="left">
+          <div class="about-photo-bg"></div>
+          <img src="images/profile.jpg" alt="Emma Lee">
+        </div>
+        <div class="about-content" data-reveal data-anim="right" data-reveal-delay="80">
+          <div class="eyebrow">About</div>
+          <h2>Hi, I'm Emma.</h2>
+          <p>I'm a University of Toronto honours graduate (GPA 3.93/4.0) working at the intersection of AI/ML, software engineering, and scalable data systems. I build production-grade LLM applications, multi-agent systems, RAG pipelines, and knowledge graphs.</p>
+          <p>Across seven research collaborations with professors and PhD researchers from Harvard, Stanford, and U of T, I've served as first author on selected projects — with one first-author manuscript currently under review at <em>Science</em>. I care about rigorous, open, mission-driven work.</p>
+          <div class="about-actions">
+            <a class="btn-chip solid" href="mailto:emmaroselle.lee@mail.utoronto.ca">Email me</a>
+            <a class="btn-chip line" href="https://linkedin.com/in/emmayhlee" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a class="btn-chip line" href="https://github.com/EmmaYHlee" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal data-anim="up">
+        <h3 class="skills-title">Skills</h3>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="sec-experience" class="experience-section">
+    <div class="hero-glow"></div>
+    <div class="section-inner" style="position:relative; z-index:2;">
+      <div class="eyebrow" data-reveal data-anim="up">Experience</div>
+      <h2 class="section-title" data-reveal data-anim="up" data-reveal-delay="60">Where I've worked</h2>
+      <p class="section-lead" data-reveal data-anim="up" data-reveal-delay="100">Seven research collaborations with professors and senior PhD researchers from Harvard, Stanford, and the University of Toronto — spanning applied AI engineering, LLM research, and computational biology.</p>
+      <div class="timeline">
+        <div class="timeline-rail"></div>
+        <div id="timelineList"></div>
+      </div>
+      <div class="leadership-block" data-reveal data-anim="up">
+        <h3>Leadership &amp; teaching</h3>
+        <p>Building and leading technical communities alongside the research — from a 600+ participant developer group to hands-on student mentorship.</p>
+        <div class="leadership-grid" id="leadershipGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESEARCH ============ -->
+  <section id="sec-research" class="research-section">
+    <canvas class="blog-canvas" id="researchCanvas"></canvas>
+    <div class="blog-glows">
+      <div class="blog-glow-a"></div>
+      <div class="blog-glow-b"></div>
+      <div class="blog-glow-c"></div>
+    </div>
+    <div class="section-inner" style="position:relative; z-index:2;">
+      <div class="eyebrow" data-reveal data-anim="up">Research &amp; Publications</div>
+      <h2 class="section-title" data-reveal data-anim="up" data-reveal-delay="60">Published &amp; in progress</h2>
+      <p class="section-lead" data-reveal data-anim="up" data-reveal-delay="100" style="margin-bottom:40px;">Click any project to open the full story — collaborators, achievements and the methods behind it.</p>
+
+      <div class="research-feature" data-reveal data-anim="zoom">
+        <div class="research-feature-texture" style="background-image:url('images/texture-navy.jpg')"></div>
+        <div class="research-feature-content">
+          <div class="research-feature-tag">Under review · First author</div>
+          <h3>A first-author manuscript under review at <em>Science</em>.</h3>
+          <p>One of several first-author works — spanning large language modelling of biomedical literature, comparative genomics, and gene-function network construction.</p>
+        </div>
+      </div>
+
+      <div class="research-list" id="researchList"></div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="sec-projects" class="projects-section">
+    <div class="projects-blob" data-parallax="0.35"></div>
+    <div class="section-inner wide">
+      <div class="eyebrow" data-reveal data-anim="up">Projects</div>
+      <h2 class="section-title" data-reveal data-anim="up" data-reveal-delay="60" style="margin-bottom:36px;">Things I've built</h2>
+      <div class="project-feature" data-reveal data-anim="zoom" data-stack id="projectFeature"></div>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ BLOG ============ -->
+  <section id="sec-blog" class="blog-section">
+    <canvas class="blog-canvas" id="blogCanvas"></canvas>
+    <div class="blog-glows">
+      <div class="blog-glow-a"></div>
+      <div class="blog-glow-b"></div>
+      <div class="blog-glow-c"></div>
+    </div>
+    <div class="section-inner" style="position:relative; z-index:2;">
+      <div class="blog-header">
+        <div>
+          <div class="eyebrow" data-reveal data-anim="up">Blog · Notes</div>
+          <h2 class="section-title" data-reveal data-anim="up" data-reveal-delay="60">What I'm learning</h2>
+          <p data-reveal data-anim="up" data-reveal-delay="100">Field notes on building real AI systems — retrieval, agents, fine-tuning, and the infrastructure that makes them production-grade.</p>
+        </div>
+        <button class="btn-new-post" id="newPostBtn" data-reveal data-anim="up" data-reveal-delay="140">＋ New post</button>
+      </div>
+      <div class="blog-grid" id="blogGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Emma Lee</div>
+        <div class="footer-loc">Toronto, Ontario</div>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:emmaroselle.lee@mail.utoronto.ca">Email →</a>
+        <a href="https://linkedin.com/in/emmayhlee" target="_blank" rel="noopener">LinkedIn →</a>
+        <a href="https://github.com/EmmaYHlee" target="_blank" rel="noopener">GitHub →</a>
+        <a href="https://drive.google.com/file/d/1dO2boFIBOtPT0oPezZbxld5jnUunw_Jk/view?usp=drive_link" target="_blank" rel="noopener">Résumé →</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ RESEARCH DETAIL OVERLAY ============ -->
+  <div class="modal-overlay" id="researchOverlay">
+    <div class="modal-scroll-area">
+      <div class="modal-card">
+        <div class="modal-dark-header">
+          <div class="modal-dark-header-texture" style="background-image:url('images/texture-navy.jpg')"></div>
+          <div class="modal-dark-header-content">
+            <div class="modal-close-row">
+              <span class="modal-num" id="researchModalNum"></span>
+              <button class="modal-close-btn" id="researchCloseBtn">✕</button>
+            </div>
+            <div class="modal-badges">
+              <span class="modal-badge-author" id="researchModalAuthor"></span>
+              <span class="modal-badge-status" id="researchModalStatus"></span>
+            </div>
+            <h2 id="researchModalTitle"></h2>
+            <div class="modal-venue" id="researchModalVenue"></div>
+          </div>
+        </div>
+        <div class="modal-body-pad">
+          <div class="modal-subhead">Collaborators</div>
+          <div class="modal-collab-tags" id="researchModalCollab"></div>
+          <div class="modal-subhead tight">What I did</div>
+          <ul class="modal-achievements" id="researchModalAchievements"></ul>
+          <div class="modal-subhead">Tools &amp; methods</div>
+          <div class="modal-skill-tags" id="researchModalSkills"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ WORK DETAIL OVERLAY ============ -->
+  <div class="modal-overlay" id="workOverlay">
+    <div class="modal-scroll-area">
+      <div class="modal-card">
+        <div class="modal-dark-header">
+          <div class="modal-dark-header-texture" style="background-image:url('images/texture-navy.jpg')"></div>
+          <div class="modal-dark-header-content">
+            <div class="modal-close-row top-align">
+              <div>
+                <div class="modal-org-tag" id="workModalOrg"></div>
+                <h2 id="workModalRole"></h2>
+              </div>
+              <button class="modal-close-btn" id="workCloseBtn">✕</button>
+            </div>
+            <div class="modal-venue" id="workModalPeriod"></div>
+          </div>
+        </div>
+        <div class="modal-body-pad">
+          <div id="workModalCollabBlock" style="display:none;">
+            <div class="modal-subhead">Collaborators</div>
+            <div class="modal-collab-tags" id="workModalCollab"></div>
+          </div>
+          <div class="modal-subhead tight">What I did</div>
+          <ul class="modal-achievements" id="workModalBullets"></ul>
+          <div class="modal-subhead">Tools &amp; skills</div>
+          <div class="modal-skill-tags" id="workModalTags"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ BLOG DETAIL OVERLAY ============ -->
+  <div class="modal-overlay post-overlay" id="postOverlay">
+    <div class="modal-scroll-area">
+      <div class="modal-card post-card-modal">
+        <div class="post-modal-cover" id="postModalCover">
+          <button class="post-modal-close" id="postCloseBtn">✕</button>
+          <span class="post-modal-badge" id="postModalBadge"></span>
+        </div>
+        <div class="post-modal-body">
+          <h1 id="postModalTitle"></h1>
+          <div class="post-modal-rule"></div>
+          <div class="post-modal-paragraphs" id="postModalBody"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ POST EDITOR OVERLAY ============ -->
+  <div class="modal-overlay editor-overlay" id="editorOverlay">
+    <div class="modal-scroll-area editor-scroll">
+      <div class="modal-card editor-card">
+        <div class="editor-header">
+          <h2 id="editorTitle">New post</h2>
+          <button class="editor-close-btn" id="editorCloseBtn">✕</button>
+        </div>
+        <div class="editor-body">
+          <label class="editor-field">Title
+            <input type="text" id="fieldTitle" placeholder="Post title">
+          </label>
+          <div class="editor-row-2">
+            <label class="editor-field">Category
+              <input type="text" id="fieldCategory" placeholder="e.g. Retrieval">
+            </label>
+            <label class="editor-field">Read time
+              <input type="text" id="fieldRead" placeholder="e.g. 6 min read">
+            </label>
+          </div>
+          <div class="editor-cover-row">
+            <span class="editor-cover-label">Cover</span>
+            <div class="editor-cover-swatches" id="coverSwatches"></div>
+          </div>
+          <label class="editor-field">Excerpt
+            <textarea id="fieldExcerpt" rows="2" placeholder="One-line summary shown on the card"></textarea>
+          </label>
+          <label class="editor-field">Body <span class="hint">— separate paragraphs with a blank line</span>
+            <textarea id="fieldBody" rows="8" placeholder="Write your post…"></textarea>
+          </label>
+          <div class="editor-actions-row">
+            <button class="btn-delete" id="deletePostBtn" style="display:none;">Delete</button>
+            <div class="editor-actions-right">
+              <button class="btn-cancel" id="cancelEditorBtn">Cancel</button>
+              <button class="btn-save" id="savePostBtn">Save post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
