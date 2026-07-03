@@ -39,7 +39,7 @@
   const WORK = [
     { role: 'Machine Learning Engineer', org: 'Tahoe Therapeutics', period: 'Feb 2026 – Present', collaborators: [], bullets: [
       'Benchmarked frontier LLMs (OpenAI, Anthropic, Amazon Bedrock, and Qwen APIs) for biomedical information extraction, optimizing extraction quality, latency, and inference cost to reduce production expenses by ~35%.',
-      'Designed multi-agent literature intelligence workflows with the Claude Agent SDK and MCP tools to autonomously discover, retrieve, and curate 300K+ biomedical publications, integrating public literature with the company's proprietary experimental data for AI-ready knowledge generation.',
+      "Designed multi-agent literature intelligence workflows with the Claude Agent SDK and MCP tools to autonomously discover, retrieve, and curate 300K+ biomedical publications, integrating public literature with the company's proprietary experimental data for AI-ready knowledge generation.",
       'Built a production large-scale LLM extraction pipeline that extracts clinical data into structured treatment regimens, adverse events, biomarkers, and supporting evidence for automated knowledge graph construction.',
       'Constructed a biomedical knowledge graph with 1.6M+ nodes and 2.2M+ relationships, powering KG-based AI agents for biomedical question answering and drug discovery.',
     ], tags: ['Claude Agent SDK', 'MCP', 'LiteLLM', 'RAG', 'Vector DBs', 'Bedrock'] },
